@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite thread-count="2" guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="tests">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="tests">
+  <test name="Chrome(failed)" parallel="tests">
+    <parameter name="browName" value="Chrom"/>
+    <classes>
+      <class name="org.question6.CrossBrowser">
+        <methods>
+          <include name="tc1" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- org.question6.CrossBrowser -->
+    </classes>
+  </test> <!-- Chrome(failed) -->
   <test name="Edge(failed)" parallel="tests">
     <parameter name="browName" value="edge"/>
     <classes>
